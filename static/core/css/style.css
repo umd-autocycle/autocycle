@@ -1,0 +1,12 @@
+body {
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+h1 {
+    font-size: 24pt;
+}
+
+#page {
+    margin: 42vh auto auto;
+    text-align: center;
+}
