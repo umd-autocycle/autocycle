@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Make sure to create a config.yaml with the secret, and database name, user, and password
 
 with open('autocycle/config.yaml') as f:
-    config = yaml.load(f.read())
+    config = yaml.load(f.read(), Loader=yaml.FullLoader)
 
 SECRET_KEY = config['secret']
 
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
