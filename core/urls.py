@@ -19,4 +19,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('team', views.team, name='team'),
+    path('timeline', views.timeline, name='timeline'),
+    path('publications', views.publications, name='publications'),
+    path('resources', views.resources, name='resources'),
 ]

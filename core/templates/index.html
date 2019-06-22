@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block body %}
-    <div id="page">
-        <h1>let's make a bike ride itself lmao</h1>
-        <h2>-- evan rman</h2>
+
+    <div id="banner" style="background-image: url({% static 'img/team-photo-5-2019.jpg' %});">
+        <div id="banner-text">
+            <h1>Team AutoCycle</h1>
+            <h2>Bikes, but better</h2>
+            <div id="sponsors">
+                <a href="http://www.gemstone.umd.edu"><img src="{% static 'img/gemstone_logo.png' %}"
+                                                           alt="The Gemstone Honors Program"></a>
+                <a href="http://www.honors.umd.edu"><img src="{% static 'img/honors_college_logo.png' %}"
+                                                         alt="The Honors College"></a>
+            </div>
+        </div>
     </div>
+
 {% endblock %}

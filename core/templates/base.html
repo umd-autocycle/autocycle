@@ -10,9 +10,22 @@
     <script src="{% static 'js/main.js' %}"></script>
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://use.typekit.net/kvk4emi.css">
+    <!-- Official UMD Sans Serif font via Adobe Creative Cloud ^ !-->
 </head>
-<body>
-{% block body %}
-{% endblock %}
+<body id="{{ page_id|default:'base' }}">
+
+<div id="page">
+    <div id="navbar">
+        <a href="{% url 'index' %}" id="home_url"><b>AutoCycle</b></a>
+        <div style="flex-grow: 1;"></div>
+        {% for page in pages %}
+            <a href="{% url page %}">{{ page|capfirst }}</a>
+        {% endfor %}
+    </div>
+    {% block body %}
+    {% endblock %}
+</div>
+
 </body>
 </html>
