@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block body %}
     <div id="content">
-        <h1>let's make a bike ride itself lmao</h1>
-        <h2>-- evan rman</h2>
+        <h1>Planned Timeline Timeline</h1>
+        <div class="figure">
+            <img src="{% static 'img/timeline.png' %}" alt="AutoCycle Timeline"
+                 style="background: white; padding: .5em;">
+            <div class="caption">
+                <i>Hypothetical Gantt Chart</i>
+            </div>
+        </div>
+        <p>
+            While the project will undoubtedly require many iterations and revisions of the plan, above is presented the
+            current general outline of the team's timeline in Gantt Chart form.
+        </p>
     </div>
 {% endblock %}

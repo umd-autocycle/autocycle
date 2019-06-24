@@ -28,6 +28,7 @@ h1 {
 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-end;
 }
 
@@ -89,7 +90,7 @@ h1 {
     color: white;
     position: absolute;
     left: 10vw;
-    top: 50vh;
+    top: 48vh;
     text-align: left;
 }
 
@@ -101,9 +102,13 @@ h1 {
 
 #banner h2 {
     font-size: 5vh;
-    font-style: italic;
     margin-top: 1vh;
     margin-bottom: 1vh;
+}
+
+#banner h3 {
+    font-size: 3vh;
+    margin: 0;
 }
 
 #banner #sponsors {
@@ -129,23 +134,49 @@ h1 {
     margin-right: auto;
 }
 
-#content p {
-    text-align: justify;
-    font-size: 12pt;
-}
-
-#content h1, #content h2, #content h3 {
+#content b {
     color: #da1f00;
 }
 
-#content p a {
+#content p {
+    text-align: justify;
+    font-size: 13pt;
+    line-height: 1.5;
+    padding-bottom: 1.5em;
+    margin: 0;
+}
+
+#content ul {
+    margin: 0;
+    padding-bottom: 1.5em;
+}
+
+#content li {
+    font-size: 13pt;
+    line-height: 1.5;
+}
+
+#content h1 {
+    font-size: 32pt;
+    color: #da1f00;
+}
+
+#content h2 {
+    color: #da1f00;
+}
+
+#content h3 {
+    color: #da1f00;
+}
+
+#content a {
     color: #da1f00;
     text-decoration: none;
     position: relative;
     transition: .25s;
 }
 
-#content p a:before {
+#content a:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -160,12 +191,36 @@ h1 {
     transition: .25s;
 }
 
-#content p a:hover {
+#content a:hover {
     color: #ca0f00;
 }
 
-#content p a:hover:before {
+#content a:hover:before {
     visibility: visible;
     transform: scaleX(1);
     background-color: #ca0f00;
+}
+
+#content img {
+    max-width: 100%;
+}
+
+.figure {
+    width: 100%;
+    padding-bottom: 1.5em;
+}
+
+.figure img {
+    width: 100%;
+}
+
+.figure .caption {
+    font-size: 11pt;
+}
+
+@media (max-aspect-ratio: 16/10) {
+    #index #navbar {
+        top: 0;
+        bottom: auto;
+    }
 }
