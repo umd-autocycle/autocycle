@@ -17,7 +17,7 @@
 
 <div id="page">
     <div id="navbar">
-        <a href="{% url 'index' %}" id="home_url"><b>AutoCycle</b></a>
+        <a href="{% url 'index' %}" id="home_url"><b>Autocycle</b></a>
         <div style="flex-grow: 1;"></div>
         {% for page in pages %}
             <a href="{% url page %}">{{ page|capfirst }}</a>
