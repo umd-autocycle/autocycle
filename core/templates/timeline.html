@@ -3,17 +3,176 @@
 
 {% block body %}
     <div id="content">
-        <h1>Planned Timeline</h1>
-        <div class="figure">
-            <img src="{% static 'img/timeline.png' %}" alt="Autocycle Timeline"
-                 style="background: white; padding: .5em;">
-            <div class="caption">
-                <i>Hypothetical Gantt Chart</i>
+        <h1>Our Progress So Far</h1>
+
+        <div id="timeline">
+            <div class="timeline-item">
+                <div class="timeline-text">
+                    <h1>Team Formed</h1>
+                    <h3>March 2019</h3>
+                    <p>
+                        After passing the Gemstone team selection process, Team Autocycle (formerly SAFE-BIKE) was
+                        established by 14 undergraduate students to develop an autonomous bicycle system to alleviate
+                        logistical hurdles faced by bikeshares.
+                    </p>
+                </div>
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/team-formed.jpg' %}" alt="Autocycle in March 2019">
+                </div>
             </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/gomez-appointed.jpg' %}" alt="Dr. Romel Gomez">
+                </div>
+                <div class="timeline-text">
+                    <h1>Mentor Appointed</h1>
+                    <h3>June 2019</h3>
+                    <p>
+                        Following consultation with Gemstone staff, Dr. Romel Gomez of the Department of Electrical
+                        and Computer Engineering was appointed as the faculty advisor to Team Autocycle. Dr. Gomez has
+                        been instrumental in providing the team with valuable feedback, access to resources, and sage
+                        advice.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-text">
+                    <h1>Image Analysis and Simulation Begun</h1>
+                    <h3>September 2019</h3>
+                    <p>
+                        With the start of the Fall 2019 semester, Team Autocycle began work on the first stage of its
+                        research, namely developing a simulator to model the behaviour of a bicycle under various
+                        control systems and training a classifier to identify objects important for bicycle navigation
+                        in a stream of images.
+                    </p>
+                </div>
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/object-detect-gif.gif' %}" alt="Example of image analysis">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/otto-von-cycle.jpg' %}" alt="Original bicycle prototype">
+                </div>
+                <div class="timeline-text">
+                    <h1>Bicycle Prototype Acquired</h1>
+                    <h3>November 2019</h3>
+                    <p>
+                        While a proper simulation was important to save time by testing numerically prior to testing
+                        empirically, the team would soon enough need to have a physical prototype for experimentation.
+                        The chosen bicycle, christened "Otto von Cycle", would go on to be the platform for empirical
+                        testing and eventual modification for stability and navigation.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-text">
+                    <h1>Empirical Characterization Begun</h1>
+                    <h3>November 2019</h3>
+                    <p>
+                        As work continued on coding the simulator and elements of the navigation system, parts of the
+                        team began work on empirical measuring the critical quantities of the bike frame such as the
+                        weight, center of mass, and moments of inertia of each of the four primary components. These
+                        values would eventually be used as parameters in the simulation and be important for properly
+                        tuning the stability control loop.
+                    </p>
+                </div>
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/com-measurements.jpg' %}" alt="Taking COM measurements">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/simulator-example.PNG' %}" alt="Example simulation result">
+                </div>
+                <div class="timeline-text">
+                    <h1>Simulation Completed</h1>
+                    <h3>January 2020</h3>
+                    <p>
+                        As January drew to a close, a fully functional version of the simulator was put into service.
+                        The program could simulate the behaviour of an arbitrary bicycle traversing a flat plane in its
+                        linear region subject to an arbitrary control function with arbitrary initial conditions. As the
+                        semester went on, additional features, including a PID autotuner, would be integrated into the
+                        system.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-text">
+                    <h1>Thesis Proposal Defense</h1>
+                    <h3>February 2020</h3>
+                    <p>
+                        At the beginning of Spring 2020 semester Team Autocycle presented its final Thesis Proposal
+                        to a committee including Gemstone staff, the team's mentor and librarian, and an outside expert,
+                        Dr. William S. Levine of the Department of Electrical and Computer Engineering and the Institute
+                        for Systems Research. The team outlined its plans for answering their research questions through
+                        the development of the autonomous bicycle system and how these plans would be executed.
+                    </p>
+                </div>
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/thesis-proposal-defense.jpg' %}" alt="Thesis proposal defense">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/motor-teardown.jpg' %}"
+                         alt="The team working on firmware to control the electric drive motor">
+                </div>
+                <div class="timeline-text">
+                    <h1>Firmware Integration Begun</h1>
+                    <h3>February 2020</h3>
+                    <p>
+                        With the simulation in a fully working state, it was time for the team to move on to writing
+                        code to control and sense from the actual Autocycle prototype. To that end, a drive motor was
+                        acquired, its input and controls characterized, and code for a microcontroller began to be
+                        developed to execute the tuned control loop on the physical prototype in real time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-text">
+                    <h1>Path Planning Begun</h1>
+                    <h3>February 2020</h3>
+                    <p>
+                        On the navigation side of the project, with a sufficiently robust image analysis system
+                        developed it was necessary to move on to generating local paths for the bicycle that could
+                        avoid the detected obstacles. This was done using bezier curves, which after translating an
+                        obstacle into a straight line obstruction could ensure the path from the designated start and
+                        end points would not collide with any blockers.
+                    </p>
+                </div>
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/obs-avoid.png' %}" alt="Sample obstacle avoidance path">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/bike-grinding-gif.gif' %}"
+                         alt="Grinding the hub of the prototype to fit the drive motor">
+                </div>
+                <div class="timeline-text">
+                    <h1>Prototype Modifications Begun</h1>
+                    <h3>March 2020</h3>
+                    <p>
+                        Moving into late spring, the team began preparing the prototype chassis to be outfitted with
+                        sensing and actuation equipment. This required several modifications to the chassis itself
+                        to accommodate the drive motor's mounting on the hub and the attachment of the front handlebar
+                        control servo motor.
+                    </p>
+                </div>
+            </div>
+
         </div>
-        <p>
-            While the project will undoubtedly require many iterations and revisions of the plan, above is presented the
-            current general outline of the team's timeline in Gantt Chart form.
-        </p>
+
     </div>
 {% endblock %}

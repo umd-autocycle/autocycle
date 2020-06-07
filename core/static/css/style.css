@@ -30,6 +30,8 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+
+    transition: top 0.5s;
 }
 
 #index #navbar #home_url {
@@ -129,7 +131,7 @@ h1 {
 #content {
     margin-top: 10vh;
     width: 80%;
-    max-width: 10in;
+    max-width: 13in;
     margin-left: auto;
     margin-right: auto;
 }
@@ -223,4 +225,36 @@ h1 {
         top: 0;
         bottom: auto;
     }
+}
+
+/* Timeline */
+
+#timeline {
+    width: 100%;
+}
+
+.timeline-item {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    height: 94vh;
+    align-items: center;
+}
+
+.timeline-text {
+    flex: 2;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.timeline-img {
+    flex: 3;
+    text-align: center;
+}
+
+.timeline-img img {
+    min-width: 400px;
+    max-width: 100%;
 }
