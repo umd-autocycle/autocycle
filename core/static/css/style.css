@@ -13,6 +13,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -84,37 +85,37 @@ h1 {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, #00000070, #da1f00ff);
+    background-image: linear-gradient(to bottom, #00000000, #00000020, #d51a00ff);
     opacity: .75;
 }
 
 #banner #banner-text {
     color: white;
-    position: absolute;
-    left: 10vw;
-    top: 48vh;
+    position: fixed;
+    left: 5vw;
+    bottom: 5vh;
     text-align: left;
 }
 
 #banner h1 {
-    font-size: 10vh;
+    font-size: 8vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
 
 #banner h2 {
-    font-size: 5vh;
+    font-size: 4vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
 
 #banner h3 {
-    font-size: 3vh;
+    font-size: 2vh;
     margin: 0;
 }
 
 #banner #sponsors {
-    height: 20vh;
+    height: 15vh;
 }
 
 #navbar a {

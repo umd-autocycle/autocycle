@@ -2,8 +2,11 @@
 {% load static %}
 
 {% block body %}
+    <video autoplay muted loop id="bg_video" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;">
+        <source src="{% static 'Autocycle Site Background.mp4' %}" type="video/mp4">
+    </video>
 
-    <div id="banner" style="background-image: url({% static 'img/team-photo-5-2019.jpg' %});">
+    <div id="banner">
         <div id="banner-text">
             <h1>Team Autocycle</h1>
             <h2><i>Bikes, but Better</i></h2>
