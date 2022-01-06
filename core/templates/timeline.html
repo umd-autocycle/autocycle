@@ -210,19 +210,125 @@
 
             <div class="timeline-item">
                 <div class="timeline-text">
-                    <h1>Where We're Headed</h1>
-                    <h3>Winter 2020-2021</h3>
+                    <h1>Initial Self-Balancing Experiments</h1>
+                    <h3>January-March 2021</h3>
                     <p>
-                        Going into the winter, Team Autocycle is pursuing additional capabilities for the prototype by
-                        allowing it to remain upright and steerable even at low or zero velocities. This will allow the
-                        Autocycle to start at rest, come to speed, navigate to its destination, and come to rest again.
-                        The team is also focusing in on experimental design for assessing the efficacy of its
-                        stabilization and navigation techniques.
+                        Beginning in the winter of 2021, the team began carrying out experiments to test the control
+                        laws meant to ensure the self-balancing of the bike. These experiments gave the team experience
+                        in data collection and procedure, while also revealing flaws in the hardware of the Autocycle
+                        prototype, including weakness in the tensioner, coupler, and other components.
                     </p>
                 </div>
                 <div class="timeline-img">
-                    <img src="{% static 'img/timeline/autocycle-animation.gif' %}"
-                         alt="Animation of simulated control system results">
+                    <video autoplay muted loop style="max-height: 100%; max-width: 100%;">
+                        <source src="{% static 'img/timeline/March21Experiment.mp4' %}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <video autoplay muted loop style="max-height: 100%; max-width: 100%;">
+                        <source src="{% static 'img/timeline/OldZSS_demo.mp4' %}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="timeline-text">
+                    <h1>Zero Speed Stability System Design</h1>
+                    <h3>April-June 2021</h3>
+                    <p>
+                        One of the issues revealed by initial testing was the need for a system to keep the Autocycle
+                        prototype level before it had gotten up to speed and was able to exert control authority
+                        via steering torque. To resolve this, a set of deployable training wheels was designed and
+                        christened the Zero Speed Stability system (ZSS).
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-text">
+                    <h1>Custom Electronics and Hardware</h1>
+                    <h3>April-June 2021</h3>
+                    <p>
+                        At the same time, work was done to improve issues identified with other hardware elements (by
+                        upgrading to stronger materials and manufacturing methods), and electronics. Notably, a custom
+                        circuit board was designed to integrate higher capacity data logging, brake control, and radio
+                        telemetry.
+                    </p>
+                </div>
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/NewShield.jpg' %}"
+                         alt="New PCB">
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <video autoplay muted loop style="max-height: 100%; max-width: 100%;">
+                        <source src="{% static 'img/timeline/Nov28Stability.mp4' %}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="timeline-text">
+                    <h1>Experimentation and System Identification</h1>
+                    <h3>July-November 2021</h3>
+                    <p>
+                        The Stability subteam continued experiments with the new hardware, increasing the frequency and
+                        tempo of experiments, and used data based methods to perform system identification on the
+                        parameters of the system to find more robust control gains.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-text">
+                    <h1>Local Path Planning Experiments</h1>
+                    <h3>September-November 2021</h3>
+                    <p>
+                        In parallel, the Navigation subteam carried out experiments to validate their obstacle detection
+                        and path planning algorithms at low speed, with the ZSS deployed. This process revealed many
+                        areas for improvement and helped the team solidify its code in preparation for integration with
+                        Stability.
+                    </p>
+                </div>
+                <div class="timeline-img">
+                    <video autoplay muted loop style="max-height: 100%; max-width: 100%;">
+                        <source src="{% static 'img/timeline/NavOverhead.mp4' %}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <video autoplay muted loop style="max-height: 100%; max-width: 100%;">
+                        <source src="{% static 'img/timeline/OttoFliesZoom.mp4' %}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="timeline-text">
+                    <h1>Successful Self-Balancing</h1>
+                    <h3>December 2021</h3>
+                    <p>
+                        After much work tuning gains, debugging firmware and hardware issues, and adjusting system model
+                        parameters, the team was able to arrive at a control that successfully balanced the Autocycle
+                        over a significant distance and rejected disturbances.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-text">
+                    <h1>Where We're Headed</h1>
+                    <h3>Winter 2022</h3>
+                    <p>
+                        Going into 2022, the team is focusing on integrating the newly achieved self-balancing
+                        capabilities with global and local navigation. GPS and other global positioning techniques
+                        will be integrated for accurate and dynamic position estimation to complete the full
+                        path-planning and balancing loop.
+                    </p>
+                </div>
+                <div class="timeline-img">
+                    <img src="{% static 'img/timeline/otto_jan22.jpg' %}"
+                         alt="The Autocycle in January of 2022">
                 </div>
             </div>
 
